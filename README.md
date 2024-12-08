@@ -66,9 +66,9 @@ asymptotic memory complexity is theta(n*2^n)
 *
 visitedmask stores the visit records of cities 0-n, expressed in binary form, from right to left
 
-Suppose n cities are input, n = 4, visitedmsk = 1011, indicating that cities 0, 1, and 3 have been visited.
+Suppose n cities are input, if n = 4, visitedmsk = 1011, indicating that cities 0, 1, and 3 have been visited.
 
-1<<n will shift the number to the left by n bits, and you can get a value of 2^n, and then 1<<n-1 can get a binary number of consecutive 1s, which is used to mark the visit status of n elements
+1<<n will shift the number to the left by n bits, and may get a value of 2^n, and then 1<<n-1 can get n consecutive "1" binary numbers to mark the visit status of n elements
 
 
 ///
