@@ -46,3 +46,38 @@ Test your new function; I've provided some basic testing code in `code.test.js`.
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+
+///
+
+visitedmask represents the visit of any subset, with 2^n combinations
+
+lastcity has n possibilities
+
+The total number of states is O(n*2^n)
+
+After that, the remaining cities need to be visited, the number is n, and the complexity is O(n)
+
+The total time complexity is theta(n^2 * 2^n)
+
+For each state, an optimal solution value needs to be stored, so it is necessary to store O(n*2^n) equivalent to the number of states
+
+asymptotic memory complexity is theta(n*2^n)
+
+*
+visitedmask stores the visit records of cities 0-n, expressed in binary form, from right to left
+
+Suppose n cities are input, if n = 4, visitedmsk = 1011, indicating that cities 0, 1, and 3 have been visited.
+
+1<<n will shift the number to the left by n bits, and may get a value of 2^n, and then 1<<n-1 can get n consecutive "1" binary numbers to mark the visit status of n elements
+
+when use mask, State detection is more efficient, and no method calls are needed for search and insertion. Equality checks or hash calculations are avoided, and only integer operations are required, which is more efficient and saves memory.
+
+///
+
+source:https://www.geeksforgeeks.org/traveling-salesman-problem-tsp-in-python/
+https://blog.csdn.net/xcl168/article/details/138730519
+https://blog.csdn.net/qq_39559641/article/details/101209534
+https://en.wikipedia.org/wiki/Held%E2%80%93Karp_algorithm
+https://en.wikipedia.org/wiki/Travelling_salesman_problem
+
+Plagiarism Statement: “I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice
