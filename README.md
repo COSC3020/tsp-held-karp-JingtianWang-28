@@ -70,6 +70,7 @@ Suppose n cities are input, if n = 4, visitedmsk = 1011, indicating that cities 
 
 1<<n will shift the number to the left by n bits, and may get a value of 2^n, and then 1<<n-1 can get n consecutive "1" binary numbers to mark the visit status of n elements
 
+when use mask, State detection is more efficient, and no method calls are needed for search and insertion. Equality checks or hash calculations are avoided, and only integer operations are required, which is more efficient and saves memory.
 
 ///
 
